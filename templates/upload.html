@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload ECG Image</title>
+    <style>
+        body {
+            background-color:#c9d3f6;
+            font-family: monospace;
+        }
+        h1{
+            color: rgb(8, 90, 3);
+            text-align: center;
+        }
+        form{
+            width: 50%;
+            margin-left: 40%;
+            margin-top: 15%; 
+        }
+        h3{
+            font-family: monospace;
+        }
+        label{
+            display: flex;
+        }
+        a{
+            text-decoration: none;
+            color: rgb(0, 0, 0);
+            margin-left: 35%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Upload ECG Image for Analysis</h1>
+    
+    <form method="POST" enctype="multipart/form-data">
+        <h3>
+            {{ form.hidden_tag() }} 
+        <label for="file">{{ form.file.label }}</label><br><br>
+        {{ form.file() }}<br><br>
+        {{ form.submit() }}
+        </h3>
+    </form>
+
+    <br>
+    <a href="/">Go back to the home page</a>
+
+</body>
+</html>

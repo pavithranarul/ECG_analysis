@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECG Analysis Result</title>
+    <style>
+        body{
+            background-color: #c9d3f6;
+            font-family: monospace;
+        }
+        h1{
+            color: rgb(8, 90, 3);
+            text-align: center;
+        }
+        a{
+            text-decoration: none;
+            margin-left: 5%;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    <h1>ECG Image Analysis Result</h1>
+
+
+    <h2>Uploaded ECG Image</h2>
+    <img src="{{ url_for('static', filename='files/' + file_path.split('/')[-1]) }}" alt="Uploaded ECG Image" width="500">
+    
+    <h2>Analysis Response</h2>
+    <p>{{ response }}</p> <!-- Display the analysis result from Gemini -->
+
+    
+    <br><br>
+    <a href="{{ url_for('upload') }}">Upload another file</a> <!-- Link to upload a new file -->
+
+</body>
+</html>
