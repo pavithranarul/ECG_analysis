@@ -4,3 +4,4 @@ wtforms
 google.generativeai
 djangorestframework
 python-dotenv
+gunicorn
